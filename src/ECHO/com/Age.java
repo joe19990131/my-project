@@ -13,7 +13,7 @@ public class Age
 			String line = scanner1.nextLine();
 			int n =Integer.parseInt(line);
 			if( n <=12)
-			{System.out.println("蘿莉與正太");}
+			{System.out.println("小學生");}
 			else if(n > 12 && n <=15)
 			{System.out.println("國中生");}
 			else if(n > 15 && n <=18)

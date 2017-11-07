@@ -11,13 +11,12 @@ public class ninenine
 		for(int i=1;i<=9;i ++)
         {
 			for (int n=2;n<=9;n++)
-			if(i*2<10)
-        	{
-        		System.out.println(n+" x "+ i +" =  " + (i*2));
-        	}
-        else {System.out.println(n+" x "+ i +" = " + (i*2));}
+			if(i*n<10)
+        	{System.out.print(n+" x "+ i +" =  " + (i*n) + "\t");}
+        else {System.out.print(n+" x "+ i +" = " + (i*n) + "\t");}
+			System.out.println();
         }
-		System.out.println(" ");
+		
 	}
 
 }

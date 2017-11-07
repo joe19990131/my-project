@@ -15,7 +15,7 @@ public class Prime
 				{p = false;
 				 break;}
 			}if(p)
-		{System.out.print(i+" ");}
+		{System.out.print(i+"\t");}
 		
 		}}
 		

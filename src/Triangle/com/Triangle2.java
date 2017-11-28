@@ -1,14 +1,14 @@
-package ECHO.com;
+package Triangle.com;
 import java.util.*;
 public class Triangle2 
 {
 
 	public static void main(String[] args) 
 	{
-		// TODO 自動產生的方法 Stub
-		System.out.println("請輸入頂端大小");
-		System.out.println("請輸入底端大小");
-		System.out.println("注意！底端數字需大於端數字");
+		// TODO ?��??�產??��?�方�? Stub
+		System.out.println("請輸?��??�端大�??");
+		System.out.println("請輸?��底端大�??");
+		System.out.println("注�?��?��?�端?��字�?大於端數�?");
 		Scanner sc1 = new Scanner(System.in);
 		Scanner sc2 = new Scanner(System.in);
 		

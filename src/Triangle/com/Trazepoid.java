@@ -1,9 +1,9 @@
-package ECHO.com;
+package Triangle.com;
 import java.util.*;
 public class Trazepoid {
 
 	public static void main(String[] args) {
-		// TODO è‡ªå‹•ç”¢ç”Ÿçš„æ–¹æ³• Stub
+		// TODO ?‡ª??•ç”¢??Ÿç?„æ–¹æ³? Stub
 		Scanner sc1 = new Scanner(System.in);
 		int i = sc1.nextInt();
 		for(int a = 1;a<=i;a++)

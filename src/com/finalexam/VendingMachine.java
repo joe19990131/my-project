@@ -6,9 +6,9 @@ public class VendingMachine {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		System.out.println("請投幣或選擇飲料(A OR B OR C)或輸入0退出");
-		
+
 		int money = 0;
 		Boolean a = true;
 		while (a) {
@@ -29,31 +29,38 @@ public class VendingMachine {
 				break;
 			case "a":
 				money = money - 15;
-				if(money>=0)
-				{System.out.println("DON!");
-				System.out.println("目前餘額:" + money);}
-				else{System.out.println("BEEP!");}
+				if (money >= 0) {
+					System.out.println("DON!");
+					System.out.println("目前餘額:" + money);
+				} else {
+					System.out.println("BEEP!");
+				}
 				break;
 			case "b":
 				money = money - 20;
-				if(money>=0)
-				{System.out.println("DON!");
-				System.out.println("目前餘額:" + money);}
-				else{System.out.println("BEEP!");}
+				if (money >= 0) {
+					System.out.println("DON!");
+					System.out.println("目前餘額:" + money);
+				} else {
+					System.out.println("BEEP!");
+				}
 				break;
 			case "c":
 				money = money - 30;
-				if(money>=0)
-				{System.out.println("DON!");
-				System.out.println("目前餘額:" + money);}
-				else{System.out.println("BEEP!");}
+				if (money >= 0) {
+					System.out.println("DON!");
+					System.out.println("目前餘額:" + money);
+				} else {
+					System.out.println("BEEP!");
+				}
 				break;
-			case "0" :
+			case "0":
 				System.out.println("BYE~");
 				a = false;
-			default : break;			
+			default:
+				break;
 			}
-		
+
 		}
 
 	}

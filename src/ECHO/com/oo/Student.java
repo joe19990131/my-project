@@ -5,6 +5,7 @@ public class Student {
 	int math;
 	int chinese;
 	String name;
+public Student(){}//要別人繼承他的時候必寫(空建構子)
 
 	public Student(String name, int english, int math, int chinese) {
 		this.english = english;

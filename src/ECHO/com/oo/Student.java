@@ -1,7 +1,8 @@
 package ECHO.com.oo;
 
 public class Student {
-	int english;
+	static int pass;
+	private int english;
 	int math;
 	int chinese;
 	String name;

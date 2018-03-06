@@ -1,18 +1,18 @@
 package venderMechine;
 
-public class Drink {
+public class Drink1 {
 	static int cash=0;
 	int price;
 	String name;
 
-	public Drink() {
+	public Drink1() {
 	}
 
-	public Drink(int price, String name) {
+	public Drink1(int price, String name) {
 		this.price = price;
 		this.name = name;
 	}
-	public  Drink(int cash) {
+	public  Drink1(int cash) {
 		this.cash = cash;
 	}
 	public static int RetCash() {

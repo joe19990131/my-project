@@ -1,4 +1,4 @@
-package com.sogo;
+package sogo;
 
 public class GoldCustomer extends SliverCustomer {
 

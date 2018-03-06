@@ -1,4 +1,4 @@
-package com.joe;
+package joe;
 
 public class Triangle {
 

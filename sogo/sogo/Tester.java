@@ -1,4 +1,4 @@
-package com.sogo;
+package sogo;
 
 import java.util.ArrayList;
 

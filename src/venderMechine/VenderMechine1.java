@@ -2,7 +2,7 @@ package venderMechine;
 
 import java.util.*;
 
-public class VenderMechine {
+public class VenderMechine1 {
 
 	public static void main(String[] args) {
 		// TODO 自動產生的方法 Stub

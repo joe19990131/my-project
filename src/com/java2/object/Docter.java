@@ -17,7 +17,7 @@ public class Docter {
 		System.out.println(name);
 	}
 
-	private void ShoeDrData() {
+	private void ShowDrData() {
 		System.out.println("姓名:" + name);
 		System.out.println("醫師鄭黛瑪:" + id);
 		System.out.println("病患數量:" + patientAmount);

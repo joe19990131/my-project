@@ -19,9 +19,9 @@ public Patient(int weight,int height){
 	this.height = height;
 }
 public void ShowIdentity(){
-	System.out.println(name + " " +idCardNumber + " " + sex + " " +age);
+	System.out.println("name:" + name + "   " +idCardNumber + "   " + sex + "   " +age+"y");
 }
 public void ShowHealthData(){
-	System.out.println(weight + " kg " + height+" cm ");
+	System.out.println(weight + " kg " +"   " + height+" cm ");
 } 
 }

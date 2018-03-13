@@ -5,23 +5,27 @@ public class Patient {
 	String sex;
 	String idCardNumber;
 	int age;
-	int weight;
-	int height;
+	float weight;
+	float height;
 public Patient(){}
-public Patient(String name,String idCardNumber,String sex,int age){
+public Patient(String name,String idCardNumber,String sex,int age,float weight,float height){
 	this.name = name;
 	this.idCardNumber = idCardNumber;
 	this.age = age;
 	this.sex = sex;
-}
-public Patient(int weight,int height){
 	this.weight = weight;
 	this.height = height;
+	
 }
-public void ShowIdentity(){
+
+
+public void showIdentity(){
 	System.out.println("name:" + name + "   " +idCardNumber + "   " + sex + "   " +age+"y");
 }
-public void ShowHealthData(){
-	System.out.println(weight + " kg " +"   " + height+" cm ");
+public void showHealthData(){
+	System.out.println(weight + " kg " +"   " + height+" m ");
 } 
+public void countBMI(){
+	System.out.println(weight/(height*height));
+}
 }

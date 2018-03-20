@@ -1,14 +1,14 @@
 package com.java2.object;
 
-public class Patient {
+public class PatientData {
 	String name;
 	String sex;
 	String idCardNumber;
 	int age;
 	float weight;
 	float height;
-public Patient(){}
-public Patient(String name,String idCardNumber,String sex,int age,float weight,float height){
+public PatientData(){}
+public PatientData(String name,String idCardNumber,String sex,int age,float weight,float height){
 	this.name = name;
 	this.idCardNumber = idCardNumber;
 	this.age = age;
@@ -26,6 +26,6 @@ public void showHealthData(){
 	System.out.println(weight + " kg " +"   " + height+" m ");
 } 
 public void countBMI(){
-	System.out.println(weight/(height*height));
+	System.out.println("BMI: "+ weight/(height*height));
 }
 }

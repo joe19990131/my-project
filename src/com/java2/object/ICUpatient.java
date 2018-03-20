@@ -1,6 +1,6 @@
 package com.java2.object;
 
-public class ICUpatient extends Patient {
+public class ICUpatient extends PatientData {
 	public int comaIndex;
 public ICUpatient(String name,String idCardNumber,String sex,int age,float weight,float height,int comaIndex){
 	this.name = name;
@@ -16,6 +16,6 @@ public ICUpatient(String name,String idCardNumber,String sex,int age,float weigh
 
 	@Override
 	public void showHealthData() {
-		System.out.println(weight + " kg " + "   " + height + " cm " + "   " + comaIndex);
+		System.out.println(weight + " kg " + "   " + height + " m " + "   " +"comaindex: "+ comaIndex);
 	}
 }

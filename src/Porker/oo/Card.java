@@ -28,7 +28,7 @@ public class Card {
 	public void show() {
 		for (int i = 0; i < number.length; i++) {
 			int c = number[i];
-			System.out.print((c % 13) + 1 + "" + (flower.charAt(c / 13)) + " ");
+			System.out.print((c % 13) + 1 + "" + (flower.charAt(c / 13)) + "\t");
 			if (i % 13 == 0) {
 				System.out.println();
 			}

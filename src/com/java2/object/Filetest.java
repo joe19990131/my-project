@@ -1,4 +1,4 @@
-package com.file;
+package com.java2.object;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

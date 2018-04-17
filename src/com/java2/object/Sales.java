@@ -12,13 +12,13 @@ public class Sales {
 		this.amount = amount;
 	}
 	public int getType() {
-		return type;
+		return type;//丟出
 	}
 	public void setType(int type) {
 		this.type = type;
 	}
 	public int getAmount() {
-		return amount;
+		return amount;//丟出
 	}
 	public void setAmount(int amount) {
 		this.amount = amount;

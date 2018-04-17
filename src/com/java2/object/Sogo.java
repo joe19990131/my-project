@@ -32,11 +32,17 @@ public class Sogo {
 			case 2:
 				List<Sales> list = new ArrayList<>();
 				try {
+					//file input
 					FileInputStream fis = new FileInputStream("sales.txt");
+					//file input>>input reader
 					InputStreamReader isr = new InputStreamReader(fis);
+					//input reader>>BufferedReader
 					BufferedReader in = new BufferedReader(isr);
+					//è®€è¡Œ
 					String line = in.readLine();
+					//ç•¶lineè®€å®Œ(æ²’æ±è¥¿è®€æ™‚)æ™‚
 					while (line != null) {
+						//å°‡lineä»¥\tåˆ†å‰²  ä¾‹:1(ç­‰ç´š)[0] \t(åˆ†å‰²) 1000(é‡‘é¡)[1]
 						String[] token = line.split("\t");
 						try {
 							int type = Integer.parseInt(token[0]);
@@ -44,10 +50,10 @@ public class Sogo {
 							Sales sales = new Sales(type, amount);
 							list.add(sales);
 						} catch (NumberFormatException e) {
-							System.out.println("¸ê®Æ®æ¦¡¿ù»~");
+							System.out.println("è³‡æ–™æ ¼å¼éŒ¯èª¤");
 							return;
 						}
-						line = in.readLine();
+						line = in.readLine();//è®€ä¸‹ä¸€è¡Œ
 					}
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
@@ -57,8 +63,10 @@ public class Sogo {
 					e.printStackTrace();
 				}
 				// report
+
+				//for eachè¿´åœˆ
 				for (Sales sales: list){
-					Customer customer = null;
+					Customer customer = null;//???
 					switch(sales.type){
 					case 1: 
 						customer = new Customer(sales.getAmount());
@@ -84,9 +92,9 @@ public class Sogo {
 		try {
 			FileOutputStream fos = new FileOutputStream("sales.txt", true);
 			PrintStream out = new PrintStream(fos);
-			System.out.print("½Ğ¿é¤J·|­ûµ¥¯Å:");
+			System.out.print("è«‹è¼¸å…¥æœƒå“¡ç­‰ç´š:");
 			int type = sc1.nextInt();
-			System.out.print("½Ğ¿é¤J¾P°âª÷ÃB:");
+			System.out.print("è«‹è¼¸å…¥éŠ·å”®é‡‘é¡:");
 			int amount = sc1.nextInt();
 			out.println(type + "\t" + amount);
 			out.flush();
@@ -99,10 +107,10 @@ public class Sogo {
 	}
 
 	public void showFunctions() {
-		System.out.println("½Ğ¿é¤J¥\¯à(1~3):");
-		System.out.println("1) ¿é¤J¾P°â°O¿ı");
-		System.out.println("2) ¦L¥X¾P°â³øªí");
-		System.out.println("3) µ²§ôµ{¦¡");
+		System.out.println("");
+		System.out.println("1)è¼¸å…¥éŠ·å”®è¨˜éŒ„");
+		System.out.println("2)å°å‡ºéŠ·å”®å ±è¡¨");
+		System.out.println("3)çµæŸç¨‹åº");
 	}
 
 	public static void main(String[] args) {

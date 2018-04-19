@@ -40,10 +40,10 @@ public class Sogo {
 					BufferedReader in = new BufferedReader(isr);
 					//讀行
 					String line = in.readLine();
-					//當line讀完(沒東西讀時)時
-					while (line != null) {
-						//將line以\t分割  例:1(等級)[0] \t(分割) 1000(金額)[1]
-						String[] token = line.split("\t");
+				
+					while (line != null) {	                              //當line讀完(沒東西讀時)時
+						
+						String[] token = line.split("\t");//將line以\t分割  例:1(等級)[0] \t(分割) 1000(金額)[1]
 						try {
 							int type = Integer.parseInt(token[0]);
 							int amount = Integer.parseInt(token[1]);
@@ -66,8 +66,8 @@ public class Sogo {
 
 				//for each迴圈
 				for (Sales sales: list){
-					Customer customer = null;//???
-					switch(sales.type){
+					Customer customer = null;	//劃分空間給customer
+					switch(sales.type){			//sale.type is a int
 					case 1: 
 						customer = new Customer(sales.getAmount());
 						break;

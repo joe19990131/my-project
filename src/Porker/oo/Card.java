@@ -18,7 +18,7 @@ public class Card {
 
 	public void shuffle() {
 		for (int i = 0; i < number.length; i++) {
-			int r = r1.nextInt(52);
+			int r = r1.nextInt(51);
 			int tmp = number[i];
 			number[i] = number[r];
 			number[r] = tmp;
@@ -29,7 +29,7 @@ public class Card {
 		for (int i = 0; i < number.length; i++) {
 			int c = number[i];
 			System.out.print((c % 13) + 1 + "" + (flower.charAt(c / 13)) + "\t");
-			if (i % 13 == 0) {
+			if ((i+1) % 13 == 0) {
 				System.out.println();
 			}
 		}

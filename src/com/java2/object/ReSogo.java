@@ -108,6 +108,9 @@ public class ReSogo {
 		}
 	}
 
+	
+	//大事throw  小事try catch
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ReSogo sogo = new ReSogo();

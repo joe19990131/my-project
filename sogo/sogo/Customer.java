@@ -1,6 +1,6 @@
 package sogo;
 
-public class Customer {
+public class Customer implements Destroyable {
 	int amount;
 	double discount = 0.1;
 
@@ -13,6 +13,11 @@ public class Customer {
 	public void count() {
 		int total = (int)(amount*(1-discount));
 		System.out.println(total);
+	}
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

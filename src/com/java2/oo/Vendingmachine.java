@@ -22,9 +22,12 @@ public class Vendingmachine {
 	}
 	
 	public void on(){
+		Scanner sc1 = new Scanner(System.in);
 		for(int i = 0;i<drinks.size();i++){
 			drinks.get(i);
+			
+			
 		}
-		
+		System.out.println("請選擇飲料");
 	}
 }

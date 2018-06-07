@@ -16,17 +16,17 @@ public class VenderMachineMain {
 			InputStreamReader isr = new InputStreamReader(fis);
 			BufferedReader in = new BufferedReader(isr);
 			String line = in.readLine();
-			while(line!=null){
-				String[] token = line.split(",");
+			while(line!= null){
 				String[] tokens = line.split(",");
-				int count = Integer.parseInt(tokens[0]);
+				int count = Integer.parseInt(tokens[0]);//飲料種類數量
 				for (int i = 0; i < count; i++){
 					String name = tokens[i*2+1];
 					int price = Integer.parseInt(tokens[i*2+2]);
 					vm.drinks.add(new Drink(i+1, name, price));
 				}
 				vm.on();
-		
+		//System.out.println(123);
+		line = in.readLine();
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

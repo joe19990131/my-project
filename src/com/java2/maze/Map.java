@@ -1,6 +1,7 @@
 package com.java2.maze;
 
 import java.awt.Transparency;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
@@ -12,7 +13,7 @@ public class Map {
 	Player player;
 	boolean a = true;
 	Random r1 = new Random();
-
+	HashSet<Integer> trap = new HashSet<>();
 	public Map() {
 		super();
 	}
@@ -32,14 +33,19 @@ public class Map {
 
 	public void putTrap() {
 
-		HashSet<Integer> trap = new HashSet<>();
+		
 		for (int i = 0; i < trapCount; i++) {
 			trap.add(r1.nextInt(16));
 		}
 		while(trap.size()!=trapCount) {
 			trap.add(r1.nextInt(16));
 		}
-		System.out.println(trap);
+		 
+          
+       
+		
+        System.out.println(trap);
+		
 	}
 
 	public void start() {
@@ -84,7 +90,7 @@ public class Map {
 				break;
 
 			}
-
+			
 			if (i == 0 || player.hp <= 0) {
 				System.out.println("~~GAME OVER~~");
 				a = false;

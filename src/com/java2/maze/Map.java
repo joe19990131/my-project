@@ -11,7 +11,7 @@ public class Map {
 	int trapCount;
 	Player player;
 	boolean a = true;
-	Random r1;
+	Random r1 = new Random();
 
 	public Map() {
 		super();
@@ -30,12 +30,14 @@ public class Map {
 		this.col = col;
 	}
 
-	public void putTrap(){
-		HashSet trap = new HashSet<>();
-		for(int i = 0;i<trapCount;i++){
-		trap.add(r1=new Random(16));}
-		if(trap.size()<trapCount){
-			trap.add(r1=new Random(16););
+	public void putTrap() {
+
+		HashSet<Integer> trap = new HashSet<>();
+		for (int i = 0; i < trapCount; i++) {
+			trap.add(r1.nextInt(16));
+		}
+		while(trap.size()!=trapCount) {
+			trap.add(r1.nextInt(16));
 		}
 		System.out.println(trap);
 	}

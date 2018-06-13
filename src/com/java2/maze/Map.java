@@ -53,7 +53,6 @@ public class Map {
 			Integer i = it.next();
 			token.add(i);
 		}
-		System.out.println(token);
 
 	}
 

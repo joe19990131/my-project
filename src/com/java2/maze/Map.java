@@ -17,7 +17,11 @@ public class Map {
 	int row;
 	int col;
 	int trapCount;
-	Player player;
+
+	int hp = 100;
+	int pos = 0;
+
+	// Player player;
 	boolean a = true;
 	Random r1 = new Random();
 	HashSet<Integer> trap = new HashSet<>();
@@ -56,53 +60,54 @@ public class Map {
 		}
 
 	}
-
+//縱向算法需調整
 	public void start() {
 		while (a) {
 			Scanner sc1 = new Scanner(System.in);
 			int i = sc1.nextInt();
 			switch (i) {
 			case 8:
-				if ((player.getPos() / col) > 0) {
-					player.setPos(player.getPos() - 4);
+				if ((pos / col) > 0) {
+					pos = pos + 4;
 				} else {
-					player.setHp(player.getHp()-5);
+					hp = hp - 5;
 				}
-				System.out.println(player.getPos() + " " + player.getHp());
+				System.out.println(pos + " " + hp);
 				break;
 			case 2:
-				if ((player.getPos() / col) < 3) {
-					player.setPos(player.getPos() + 4);
+				if ((pos / col) < 3) {
+					pos = pos - 4;
 				} else {
-					player.setHp(player.getHp() - 5);
+					hp = hp - 5;
 				}
-				System.out.println(player.getPos() + " " + player.getHp());
+				System.out.println(pos + " " + hp);
 				break;
 			case 4:
-				if ((player.getPos() % col) > 0) {
-					player.setPos(player.getPos()-1);
+				if ((pos % col) >= 0) {
+					pos = pos - 1;
 				} else {
-					player.setHp(player.getHp() - 5);
+					hp = hp - 5;
 				}
-				System.out.println(player.getPos() + " " + player.getHp());
+				System.out.println(pos + " " + hp);
 				break;
 			case 6:
-				if ((player.getPos() % col) < 3) {
-					player.setPos(player.getPos()+1);
+				if ((pos % col) < 3) {
+					pos = pos + 1;
 				} else {
-					player.setHp(player.getHp() - 5);
+					hp = hp - 5;
 				}
-				System.out.println(player.getPos() + " " + player.getHp());
+				System.out.println(pos + " " + hp);
 				break;
 			case 5:
 				System.out.println("attack!!");
 				break;
 
 			}
-			if(player.getPos() == token.get(0) || player.getPos() == token.get(1) || player.getPos() == token.get(2) || player.getPos() == token.get(3) || player.getPos() == token.get(4)) {
-				player.hp = player.hp-5;
+			if (pos == token.get(0) || pos == token.get(1) || pos == token.get(2)
+					|| pos == token.get(3) || pos == token.get(4)) {
+				hp = hp - 5;
 			}
-			if (i == 0 || player.getHp() <= 0) {
+			if (i == 0 || hp <= 0) {
 				System.out.println("~~GAME OVER~~");
 				a = false;
 			}

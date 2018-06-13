@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -46,20 +47,13 @@ public class Map {
 		while (trap.size() != trapCount) {
 			trap.add(r1.nextInt(16));
 		}
-		
-		try {
-			FileOutputStream fos = new FileOutputStream("mazetrap.txt", true);
-			PrintStream out = new PrintStream(fos);
-			for (Integer tp : trap) {
-				out.print(tp + "\t");
-			}
-			out.println();
-			out.flush();
-			out.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		List<Integer> token = new ArrayList<>();
+		Iterator<Integer> it = trap.iterator();
+		while(it.hasNext()) {
+			Integer i = it.next();
+			System.out.println(i);
 		}
+		
 
 	}
 

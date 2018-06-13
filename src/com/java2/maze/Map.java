@@ -1,8 +1,14 @@
 package com.java2.maze;
 
 import java.awt.Transparency;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,6 +20,7 @@ public class Map {
 	boolean a = true;
 	Random r1 = new Random();
 	HashSet<Integer> trap = new HashSet<>();
+
 	public Map() {
 		super();
 	}
@@ -33,19 +40,27 @@ public class Map {
 
 	public void putTrap() {
 
-		
 		for (int i = 0; i < trapCount; i++) {
 			trap.add(r1.nextInt(16));
 		}
-		while(trap.size()!=trapCount) {
+		while (trap.size() != trapCount) {
 			trap.add(r1.nextInt(16));
 		}
-		 
-          
-       
 		
-        System.out.println(trap);
-		
+		try {
+			FileOutputStream fos = new FileOutputStream("mazetrap.txt", true);
+			PrintStream out = new PrintStream(fos);
+			for (Integer tp : trap) {
+				out.print(tp + "\t");
+			}
+			out.println();
+			out.flush();
+			out.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 	public void start() {
@@ -90,7 +105,7 @@ public class Map {
 				break;
 
 			}
-			
+
 			if (i == 0 || player.hp <= 0) {
 				System.out.println("~~GAME OVER~~");
 				a = false;

@@ -21,6 +21,7 @@ public class MazeMain {
 			int trapCount = Integer.parseInt(line);
 			Map mz = new Map(row,col, trapCount);
 			mz.putTrap();
+			mz.start();
 		} catch (FileNotFoundException e) {
 			// TODO: handle exception
 			e.printStackTrace();

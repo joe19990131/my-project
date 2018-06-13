@@ -51,9 +51,9 @@ public class Map {
 		Iterator<Integer> it = trap.iterator();
 		while(it.hasNext()) {
 			Integer i = it.next();
-			System.out.println(i);
+			token.add(i);
 		}
-		
+		System.out.println(token);
 
 	}
 

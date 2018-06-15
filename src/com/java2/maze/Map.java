@@ -68,7 +68,7 @@ public class Map {
 			switch (i) {
 			case 8:
 				if ((pos / col) > 0) {
-					pos = pos + 4;
+					pos = pos - 4;
 				} else {
 					hp = hp - 5;
 				}
@@ -76,14 +76,14 @@ public class Map {
 				break;
 			case 2:
 				if ((pos / col) < 3) {
-					pos = pos - 4;
+					pos = pos + 4;
 				} else {
 					hp = hp - 5;
 				}
 				System.out.println(pos + " " + hp);
 				break;
 			case 4:
-				if ((pos % col) >= 0) {
+				if ((pos % col) > 0) {
 					pos = pos - 1;
 				} else {
 					hp = hp - 5;

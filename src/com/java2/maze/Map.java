@@ -17,11 +17,10 @@ public class Map {
 	int row;
 	int col;
 	int trapCount;
-
-	int hp = 100;
-	int pos = 0;
-
-	// Player player;
+	Player player = new Player(100, 0);
+	int hp = player.getHp();
+	int pos = player.getPos();
+	
 	boolean a = true;
 	Random r1 = new Random();
 	HashSet<Integer> trap = new HashSet<>();

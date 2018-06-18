@@ -1,8 +1,8 @@
 package com.java2.maze;
 
 public class Player {
-	int hp = 100;
-	int pos = 0;
+	int hp;
+	int pos;
 
 	public Player() {
 	}

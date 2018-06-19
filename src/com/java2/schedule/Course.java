@@ -1,6 +1,6 @@
 package com.java2.schedule;
 
-public class Schedule {
+public class Course {
 	int weekDay;
 	int startTime;
 	String room;
@@ -12,14 +12,14 @@ public class Schedule {
 	}
 
 	String subject;
-	int Duration;
+	int duration;
 
-	public Schedule() {
+	public Course() {
 		super();
 	}
 	public Boolean isAvaliable(int weekDay,int startTime){
 		Boolean a = false;
-		if(this.weekDay!=0 && this.startTime<24) {
+		if(this.weekDay == weekDay && this.startTime == startTime) {
 			a = true;
 		}
 		return a;
@@ -49,19 +49,19 @@ public class Schedule {
 	}
 
 	public int getDuration() {
-		return Duration;
+		return duration;
 	}
 
 	public void setDuration(int duration) {
-		Duration = duration;
+		this.duration = duration;
 	}
-	public Schedule(int weekDay, int startTime, String room, String subject, int duration) {
+	public Course(int weekDay, int startTime, String room, String subject, int duration) {
 		super();
 		this.weekDay = weekDay;
 		this.startTime = startTime;
 		this.room = room;
 		this.subject = subject;
-		Duration = duration;
+		this.duration = duration;
 	}
 
 	

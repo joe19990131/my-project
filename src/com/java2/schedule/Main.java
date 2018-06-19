@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
+
+import javax.security.auth.Subject;
 
 /* 有一文字檔儲存了課表資料(schedule.txt)
  * 請讀取資料後，設計程式可檢查是否有空檔?
@@ -18,21 +21,29 @@ import java.io.IOException;
 public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Course course = new Course();
+		Scanner sc1 = new Scanner(System.in);
+		int wd = sc1.nextInt();
+		int st = sc1.nextInt();
 		try {
 			FileReader fr = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
-			while(line!=null) {
-			String[] token = line.split(",");
-			int sttime = Integer.parseInt(token[0]);
-			
-			
-			
-			
-			
-			
-			
+			while (line != null) {
+				String[] token = line.split(",");
+				int weekDay = Integer.parseInt(token[0]);
+				int startTime = Integer.parseInt(token[1]);
+				int duration = Integer.parseInt(token[2]);
+				String room = token[3];
+				String subject = token[4];
+
+				line = in.readLine();
+				if(course.isAvaliable(wd, st)){
+					System.out.println(room+subject+(startTime+duration));
+				}
 			}
+			
+				
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

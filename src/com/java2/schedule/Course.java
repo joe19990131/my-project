@@ -1,9 +1,13 @@
 package com.java2.schedule;
 
+import java.util.ArrayList;
+import java.util.List;
+//新增啟動方法
 public class Course {
 	int weekDay;
 	int startTime;
 	String room;
+	List<Course> courses = new ArrayList();
 	public int getWeekDay() {
 		return weekDay;
 	}

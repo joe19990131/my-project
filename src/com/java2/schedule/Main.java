@@ -21,29 +21,26 @@ import javax.security.auth.Subject;
 public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Course course = new Course();
-		Scanner sc1 = new Scanner(System.in);
-		int wd = sc1.nextInt();
-		int st = sc1.nextInt();
 		try {
+			Course course = new Course();
 			FileReader fr = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
-			while (line != null) {
+			while(line!=null) {
 				String[] token = line.split(",");
 				int weekDay = Integer.parseInt(token[0]);
 				int startTime = Integer.parseInt(token[1]);
 				int duration = Integer.parseInt(token[2]);
 				String room = token[3];
 				String subject = token[4];
-
-				line = in.readLine();
-				if(course.isAvaliable(wd, st)){
-					System.out.println(room+subject+(startTime+duration));
-				}
-			}
+				course.courses.add(new Course(weekDay, startTime, room, subject, duration));
 			
-				
+				line = in.readLine();
+
+			}
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -51,5 +48,6 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}
 }

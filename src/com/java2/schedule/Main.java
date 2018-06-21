@@ -6,8 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-import javax.security.auth.Subject;
-
 /* 有一文字檔儲存了課表資料(schedule.txt)
  * 請讀取資料後，設計程式可檢查是否有空檔?
  * 如:
@@ -26,7 +24,7 @@ public class Main {
 			FileReader fr = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
-			while(line!=null) {
+			while (line != null) {
 				String[] token = line.split(",");
 				int weekDay = Integer.parseInt(token[0]);
 				int startTime = Integer.parseInt(token[1]);
@@ -34,9 +32,24 @@ public class Main {
 				String room = token[3];
 				String subject = token[4];
 				course.courses.add(new Course(weekDay, startTime, room, subject, duration));
-			
+
 				line = in.readLine();
 
+			}
+			Scanner sc1 = new Scanner(System.in);
+			int wd = sc1.nextInt();
+			int stt = sc1.nextInt();
+			for (Course c : course.courses) {
+				if (course.isAvaliable(wd, stt)) {
+					if (course.isAvaliable(wd, stt)) {
+						System.out.println("【有空檔】");
+						break;
+					} else {
+						System.out.println("【有課: " + course.room + " " + course.subject + " 到 "
+								+ (course.startTime + course.duration) + "時 】");
+						break;
+					}
+				}else {continue;}
 			}
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block

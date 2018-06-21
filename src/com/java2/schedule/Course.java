@@ -69,15 +69,15 @@ public class Course {
 	}
 	
 	public Boolean isAvaliable(int weekDay, int startTime) {
-		Boolean k, j;
-		Boolean a = true;
+		
+		boolean a = false;
 		if (this.weekDay == weekDay && this.startTime <= startTime && startTime <= (this.startTime + this.duration)) {
-			k = false;
-			a = k;
+			a = false;
+			
 		} else if (this.weekDay == weekDay && this.startTime >= startTime
 				&& startTime >= (this.startTime + this.duration)) {
-			j = true;
-			a = j;
+			a = true;
+		
 		}
 		return a;
 	}

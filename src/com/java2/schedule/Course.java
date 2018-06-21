@@ -2,32 +2,31 @@ package com.java2.schedule;
 
 import java.util.ArrayList;
 import java.util.List;
+
 //新增啟動方法
 public class Course {
 	int weekDay;
 	int startTime;
 	String room;
+	String subject;
+	int duration;
+	
 	List<Course> courses = new ArrayList();
+
 	public int getWeekDay() {
 		return weekDay;
 	}
+
 	public void setWeekDay(int weekDay) {
 		this.weekDay = weekDay;
 	}
 
-	String subject;
-	int duration;
-
 	public Course() {
 		super();
 	}
-	public Boolean isAvaliable(int weekDay,int startTime){
-		Boolean a = false;
-		if(this.weekDay == weekDay && this.startTime == startTime) {
-			a = true;
-		}
-		return a;
-	}
+
+	
+
 	public int getStartTime() {
 		return startTime;
 	}
@@ -59,6 +58,7 @@ public class Course {
 	public void setDuration(int duration) {
 		this.duration = duration;
 	}
+
 	public Course(int weekDay, int startTime, String room, String subject, int duration) {
 		super();
 		this.weekDay = weekDay;
@@ -67,6 +67,19 @@ public class Course {
 		this.subject = subject;
 		this.duration = duration;
 	}
-
 	
+	public Boolean isAvaliable(int weekDay, int startTime) {
+		Boolean k, j;
+		Boolean a = true;
+		if (this.weekDay == weekDay && this.startTime <= startTime && startTime <= (this.startTime + this.duration)) {
+			k = false;
+			a = k;
+		} else if (this.weekDay == weekDay && this.startTime >= startTime
+				&& startTime >= (this.startTime + this.duration)) {
+			j = true;
+			a = j;
+		}
+		return a;
+	}
+
 }

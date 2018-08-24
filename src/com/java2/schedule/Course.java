@@ -68,18 +68,16 @@ public class Course {
 		this.duration = duration;
 	}
 	
-	public Boolean isAvaliable(int weekDay, int startTime) {
-		
-		boolean a = false;
-		if (this.weekDay == weekDay && this.startTime <= startTime && startTime <= (this.startTime + this.duration)) {
-			a = false;
-			
-		} else if (this.weekDay == weekDay && this.startTime >= startTime
-				&& startTime >= (this.startTime + this.duration)) {
-			a = true;
-		
-		}
-		return a;
-	}
+	
 
 }
+
+//(this.weekDay == weekDay && this.startTime <= startTime && startTime <= (this.startTime + this.duration)
+
+
+
+//this.weekDay == weekDay && this.startTime >= startTime&& startTime >= (this.startTime + this.duration)
+
+
+
+

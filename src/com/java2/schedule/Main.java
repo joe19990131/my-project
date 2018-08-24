@@ -21,6 +21,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		try {
 			Course course = new Course();
+			Method m = new Method();
 			FileReader fr = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
@@ -36,24 +37,26 @@ public class Main {
 				line = in.readLine();
 
 			}
+			System.out.println("共讀取" + (course.courses.size()) + "筆資料");
 			Scanner sc1 = new Scanner(System.in);
+			Scanner sc2 = new Scanner(System.in);
+			System.out.println("Please enter the day：");
 			int wd = sc1.nextInt();
-			int stt = sc1.nextInt();
-			for (Course c : course.courses) {
-				if (course.isAvaliable(wd, stt)) {
-					if (course.isAvaliable(wd, stt)) {
-						System.out.println("【有空檔】");
-						break;
-					} else {
-						System.out.println("【有課: " + course.room + " " + course.subject + " 到 "
-								+ (course.startTime + course.duration) + "時 】");
-						break;
-					}
-				}else {continue;}
+			System.out.println("Please enter the start time：");
+			int stt = sc2.nextInt();
+			// m.isAvaliable(wd, stt);
+			for (int i = 0; i < course.courses.size(); i++) {
+				course.courses.get(i);
+				if (course.getWeekDay() == wd && stt < (course.getStartTime() + course.getDuration())
+						&& stt >= course.getStartTime()) {
+					System.out.println("【有課: " + course.room + " " + course.subject + " 到 "
+							+ (course.startTime + course.duration) + "時 】");
+					break;
+				} else {
+					continue;
+				}
+
 			}
-		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,6 +1,6 @@
 package ABgame.oo;
 
-import java.security.PublicKey;  
+ 
 
 public class ABNumber {
 	String num;

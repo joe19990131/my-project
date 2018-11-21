@@ -1,26 +1,21 @@
 package joe;
 
 public class Triangle {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	for(int j = 1;j<=5;j++)//執行次數
-	{for(int k = 4;k>=j;k--)//遞增"<=",地減">="
-		System.out.print(" ");
-	for(int i = 1;i<=2*j-1;i++)
-		System.out.print("*");
-		System.out.println();
-	}
-		
-		
-		
-		
-			
-		}
-			
-			
-			
-		}
-		
-	
 
+		int c = 1;
+		for (int i = 1; i <= 1; i++) {
+			for (int j = 1; j <= i; j++) {
+				for (int k = 1; k <= j; k++) {
+					for (int m = 1; m <= k; m++) {
+						c++;
+					}
+				}
+			}
+
+		}
+		System.out.println(c);
+	}
+
+}
